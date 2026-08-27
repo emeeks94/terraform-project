@@ -195,9 +195,9 @@ resource "aws_lb_target_group" "checkout_api" {
   vpc_id   = module.network.vpc_id
 
   health_check {
-    path                = "/"
-    port                = "3000"
-    protocol            = "HTTP"
+    path     = "/"
+    port     = "3000"
+    protocol = "HTTP"
   }
 }
 
