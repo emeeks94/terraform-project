@@ -145,7 +145,7 @@ resource "aws_instance" "backend" {
               set -e
 
               apt-get update
-              apt-get install -y docker.io awscli
+              apt-get install -y docker.io
 
               systemctl enable docker
               systemctl start docker
@@ -195,9 +195,9 @@ resource "aws_lb_target_group" "checkout_api" {
   vpc_id   = module.network.vpc_id
 
   health_check {
-    path     = "/"
-    port     = "3000"
-    protocol = "HTTP"
+    path                = "/"
+    port                = "3000"
+    protocol            = "HTTP"
   }
 }
 
@@ -225,6 +225,8 @@ resource "aws_lb_listener" "http" {
     target_group_arn = aws_lb_target_group.checkout_api.arn
   }
 }
+
+
 
 
 
