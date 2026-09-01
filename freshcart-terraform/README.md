@@ -12,7 +12,7 @@ Two services and a database:
 
 Neither service ships with a Dockerfile, a `docker-compose.yml`, or any infrastructure code. That's intentional — writing those *is* the assignment in the weeks that need them.
 
-## Running it locally, before any of that
+## Running it locally, before any of that is good
 
 You'll need a Postgres database reachable from your machine, and Node.js 20+.
 
