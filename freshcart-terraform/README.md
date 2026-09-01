@@ -2,7 +2,7 @@
 
 FreshCart is a small grocery-delivery app you'll build on throughout this program. It's not a finished product — it's the same working codebase you'll containerize, provision infrastructure for, ship through a pipeline, orchestrate, and monitor as the course goes on. Same app, every week, so the work compounds instead of starting over each time.
 
-## What's actually here
+## What's actually here for now
 
 Two services and a database:
 

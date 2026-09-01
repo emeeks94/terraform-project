@@ -144,20 +144,27 @@ resource "aws_instance" "backend" {
               #!/bin/bash
               set -e
 
+              # Update packages
               apt-get update
+
+              # Install Docker
               apt-get install -y docker.io
 
+              # Enable and start Docker
               systemctl enable docker
               systemctl start docker
 
+              # Pull the checkout API image
               docker pull ${var.checkout_api_image}
 
+              # Start the checkout API container
               docker run -d \
                 --name checkout-api \
                 --restart unless-stopped \
                 -p 3000:3000 \
+                -e DATABASE_URL="${var.database_url}" \
                 ${var.checkout_api_image}
-              EOF
+            EOF
 
   tags = {
     Name        = "freshcart-${var.environment}-backend"
