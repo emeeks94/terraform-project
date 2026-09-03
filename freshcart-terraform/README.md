@@ -2,7 +2,7 @@
 
 FreshCart is a small grocery-delivery app you'll build on throughout this program. It's not a finished product — it's the same working codebase you'll containerize, provision infrastructure for, ship through a pipeline, orchestrate, and monitor as the course goes on. Same app, every week, so the work compounds instead of starting over each time.
 
-## What's actually here for now
+## What's actually here for now to see
 
 Two services and a database:
 
@@ -12,7 +12,7 @@ Two services and a database:
 
 Neither service ships with a Dockerfile, a `docker-compose.yml`, or any infrastructure code. That's intentional — writing those *is* the assignment in the weeks that need them.
 
-## Running it locally, before any of that is good
+## Running it locally, before any of that is good 
 
 You'll need a Postgres database reachable from your machine, and Node.js 20+.
 
