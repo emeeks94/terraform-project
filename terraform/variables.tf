@@ -32,3 +32,10 @@ variable "checkout_api_image" {
   description = "FreshCart checkout-api Docker image"
   type        = string
 }
+
+
+variable "database_url" {
+  description = "PostgreSQL connection string"
+  type        = string
+  sensitive   = true
+}
