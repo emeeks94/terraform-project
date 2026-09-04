@@ -1,11 +1,14 @@
 variable "environment" {
-  type = string
+  description = "Environment name"
+  type        = string
 }
 
 variable "vpc_cidr" {
-  type = string
+  description = "CIDR block for the VPC"
+  type        = string
 }
 
 variable "azs" {
-  type = list(string)
+  description = "Availability Zones"
+  type        = list(string)
 }
