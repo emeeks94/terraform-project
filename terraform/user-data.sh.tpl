@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "===== FreshCart user-data version 2 ====="
+echo "===== FreshCart user-data version 3 ====="
 
 set -euxo pipefail
 
@@ -18,7 +18,7 @@ apt-get install -y curl unzip
 
 echo "===== Installing Docker ====="
 
-apt-get install -y docker.io docker-compose-v2
+apt-get install -y docker.io
 
 systemctl enable docker
 systemctl start docker
@@ -33,6 +33,18 @@ curl -fsSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" \
 unzip -q /tmp/awscliv2.zip -d /tmp
 
 /tmp/aws/install
+
+echo "===== Versions ====="
+
+echo "===== Installing Docker Compose ====="
+
+mkdir -p /usr/local/lib/docker/cli-plugins
+
+curl -SL \
+  "https://github.com/docker/compose/releases/download/v2.39.2/docker-compose-linux-x86_64" \
+  -o /usr/local/lib/docker/cli-plugins/docker-compose
+
+chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 
 echo "===== Versions ====="
 

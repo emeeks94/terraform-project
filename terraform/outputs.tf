@@ -49,3 +49,9 @@ output "backend_private_ip" {
   description = "Private IP address of the FreshCart backend"
   value       = aws_instance.backend.private_ip
 }
+
+
+output "alb_dns_name" {
+  description = "DNS name of the FreshCart Application Load Balancer"
+  value       = aws_lb.freshcart.dns_name
+}
