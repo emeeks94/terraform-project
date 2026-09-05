@@ -32,3 +32,8 @@ variable "checkout_api_image" {
   description = "FreshCart checkout-api Docker image"
   type        = string
 }
+
+variable "storefront_image" {
+  description = "FreshCart storefront Docker image"
+  type        = string
+}

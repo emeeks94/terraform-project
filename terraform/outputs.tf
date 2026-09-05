@@ -38,3 +38,14 @@ output "ec2_security_group_id" {
   description = "FreshCart EC2 security group ID"
   value       = module.security.ec2_security_group_id
 }
+
+
+output "backend_instance_id" {
+  description = "FreshCart backend EC2 instance ID"
+  value       = aws_instance.backend.id
+}
+
+output "backend_private_ip" {
+  description = "Private IP address of the FreshCart backend"
+  value       = aws_instance.backend.private_ip
+}
