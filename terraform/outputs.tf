@@ -27,3 +27,14 @@ output "nat_gateway_id" {
   description = "FreshCart NAT Gateway ID"
   value       = module.network.nat_gateway_id
 }
+
+
+output "alb_security_group_id" {
+  description = "FreshCart ALB security group ID"
+  value       = module.security.alb_security_group_id
+}
+
+output "ec2_security_group_id" {
+  description = "FreshCart EC2 security group ID"
+  value       = module.security.ec2_security_group_id
+}
