@@ -55,3 +55,9 @@ output "alb_dns_name" {
   description = "DNS name of the FreshCart Application Load Balancer"
   value       = aws_lb.freshcart.dns_name
 }
+
+
+output "alb_target_group_arn" {
+  description = "ARN of the FreshCart ALB target group"
+  value       = aws_lb_target_group.freshcart.arn
+}
