@@ -12,7 +12,7 @@ COPY . .
 RUN npm run build
 
 
-# ---------- Runtime Stage ----------
+# ---------- Runtime Staging ----------
 FROM nginx:1.29-alpine
 
 RUN rm -rf /usr/share/nginx/html/*
