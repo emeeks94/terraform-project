@@ -15,6 +15,7 @@ resource "aws_instance" "backend" {
   user_data_replace_on_change = true
 
   user_data = templatefile("${path.module}/user-data.sh.tpl", {
+    aws_region         = var.aws_region
     checkout_api_image = var.checkout_api_image
     storefront_image   = var.storefront_image
     db_init_sql        = file("${path.module}/../freshcart-terraform/checkout-api/db/init.sql")

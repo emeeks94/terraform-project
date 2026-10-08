@@ -109,8 +109,8 @@ COMPOSE
 
 echo "===== Docker Compose configuration created ====="
 
-AWS_REGION="us-east-1"
-ECR_REGISTRY="699588737174.dkr.ecr.us-east-1.amazonaws.com"
+AWS_REGION="${aws_region}"
+ECR_REGISTRY="$(echo "${checkout_api_image}" | cut -d/ -f1)"
 
 echo "===== Logging into private ECR ====="
 
